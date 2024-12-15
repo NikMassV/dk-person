@@ -1,0 +1,6 @@
+version: "3"
+services:
+  person:
+    build: ./person-service
+    ports:
+      - "8070:8080"
