@@ -4,3 +4,15 @@ services:
     build: ./person-service
     ports:
       - "8070:8080"
+  gateway:
+    build: ./api-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      PERSON_SERVICE_URL: "http://host.docker.internal:8070"
+  address:
+    build: ./address-service
+    ports:
+      - "8090:8080"
+    environment:
+      PERSON_SERVICE_URL: "http://host.docker.internal:8070"
