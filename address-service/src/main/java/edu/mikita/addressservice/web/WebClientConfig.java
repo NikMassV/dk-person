@@ -1,4 +1,4 @@
-package edu.mikita.web;
+package edu.mikita.addressservice.web;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

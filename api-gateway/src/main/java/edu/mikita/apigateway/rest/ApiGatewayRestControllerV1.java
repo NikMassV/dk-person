@@ -1,4 +1,4 @@
-package edu.mikita.rest;
+package edu.mikita.apigateway.rest;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

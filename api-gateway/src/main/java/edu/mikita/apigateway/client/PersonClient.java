@@ -1,6 +1,6 @@
-package edu.mikita.client;
+package edu.mikita.apigateway.client;
 
-import edu.mikita.dto.PersonDto;
+import edu.mikita.apigateway.dto.PersonDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,6 +20,16 @@ public class PersonClient {
     private final RestTemplate restTemplate;
     @Value("${person.service.url}")
     private String personServiceUrl;
+
+    public PersonDto getPersonByUid(String uid) {
+        ResponseEntity<PersonDto> response = restTemplate.exchange(
+                personServiceUrl + "/api/v1/persons/" + uid, HttpMethod.GET, null,
+                new ParameterizedTypeReference<>() {
+                });
+        PersonDto result = response.getBody();
+        log.info("IN getPersonByUid - person with uid {} obtained", uid);
+        return result;
+    }
 
     public List<PersonDto> getPersons() {
         ResponseEntity<List<PersonDto>> response = restTemplate.exchange(

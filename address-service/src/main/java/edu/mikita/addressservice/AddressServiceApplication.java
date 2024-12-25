@@ -1,12 +1,12 @@
-package edu.mikita;
+package edu.mikita.addressservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PersonServiceApplication {
+public class AddressServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PersonServiceApplication.class, args);
+        SpringApplication.run(AddressServiceApplication.class, args);
     }
 }
