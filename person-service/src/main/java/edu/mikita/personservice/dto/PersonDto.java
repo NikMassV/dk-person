@@ -1,4 +1,4 @@
-package edu.mikita.dto;
+package edu.mikita.personservice.dto;
 
 public record PersonDto(String uid,
                         String firstName,

@@ -1,6 +1,6 @@
-package edu.mikita.rest;
+package edu.mikita.personservice.rest;
 
-import edu.mikita.dto.PersonDto;
+import edu.mikita.personservice.dto.PersonDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

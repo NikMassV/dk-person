@@ -1,7 +1,7 @@
-package edu.mikita.rest;
+package edu.mikita.apigateway.rest;
 
-import edu.mikita.client.PersonClient;
-import edu.mikita.dto.PersonDto;
+import edu.mikita.apigateway.client.PersonClient;
+import edu.mikita.apigateway.dto.PersonDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
